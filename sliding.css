@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    height: auto;
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #BEEBF1;
+}
+
+.image-design {
+    max-width: 607.174px; /* Set a maximum width for the image-design */
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 5px solid #000;
+    mix-blend-mode: darken;
+    transform: rotate(-10.715deg);
+}
+
+.image-design img {
+    max-width: 100%; /* Make sure the image doesn't exceed the container */
+    border-radius: 20px;
+    transform: rotate(-10.715deg);
+}
+
+.bg-gradient{
+    display: flex;
+width: 151.855px;
+padding: 16px ;
+justify-content: center;
+gap: 10px;
+border-radius: 19px;
+border: 1px solid var(--Primary-Blue, #253685);
+background: #FFF;
+}
+
+
+.container{
+    display: flex;
+    height: 90vw;
+}
+
+.panel {
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 0.5;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    background-size: cover;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+h3 {
+    font-size: 24px;
+    position: absolute;
+    margin: 0;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+
+}
